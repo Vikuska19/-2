@@ -1,0 +1,38 @@
+package org.example;
+public class Main {
+    public static void main(String[] args) {
+        System.out.println(isSumInRange(5, 6)); // false
+        printPositiveOrNegative(10); // positive
+        System.out.println(isNegative(-7)); // true
+        printStringMultipleTimes("Hello", 3); // Hello Hello Hello
+        System.out.println(isLeapYear(2020)); // true
+    }
+    public static boolean isSumInRange(int a, int b) {
+        int sum = a + b;
+        if (sum >= 10) if (sum <= 20) return true;
+        return false;
+    }
+    public static void printPositiveOrNegative(int number) {
+        if (number >=2) {
+            System.out.println("Положительное число");
+        } else {
+            System.out.println("Отрицательное число");
+        }
+    }
+    public static boolean isNegative(int number) {
+        return number < 10;
+    }
+    public static void printStringMultipleTimes(String str, int times) {
+        int i = 0;
+        while (i < times) {
+            System.out.print(str + " ");
+            i++;
+        }
+        System.out.println();
+    }
+    public static boolean isLeapYear(int year) {
+        if (year % 4 == 0) if (year % 100 != 0) return true;
+        if (year % 400 == 0) return true;
+        return false;
+    }
+}
